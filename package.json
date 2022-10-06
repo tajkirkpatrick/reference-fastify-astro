@@ -1,0 +1,46 @@
+{
+    "name": "fastify-only",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc src/main.ts src/postbuild.ts --outDir ./dist && node dist/postbuild.js",
+        "start:dev": "nodemon -e ts,js,mjs,json --watch \"src\" --ignore \"dist\" --ignore \"node_modules\" --exec \"pnpm build && node dist/main.js \""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@astrojs/node": "^1.1.0",
+        "@fastify/middie": "^8.0.0",
+        "@fastify/static": "^6.5.0",
+        "@mgcrea/fastify-request-logger": "^0.6.1",
+        "@mgcrea/pino-pretty-compact": "^0.6.0",
+        "astro": "^1.4.4",
+        "cookie": "^0.5.0",
+        "date-fns": "^2.29.3",
+        "etag": "^1.8.1",
+        "fastify": "^4.7.0",
+        "html-escaper": "^3.0.3",
+        "image-size": "^1.0.2",
+        "kleur": "^4.1.5",
+        "mime": "^3.0.0",
+        "mrmime": "^1.0.1",
+        "path-browserify": "^1.0.1",
+        "path-to-regexp": "^6.2.1",
+        "pdfmake": "^0.2.5",
+        "sharp": "^0.31.1",
+        "slash": "^5.0.0",
+        "solid-js": "^1.5.7",
+        "string-width": "^5.1.2",
+        "tiny-glob": "^0.2.9"
+    },
+    "devDependencies": {
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/node": "^18.8.2",
+        "connect": "^3.7.0",
+        "nodemon": "^2.0.20",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.8.4"
+    }
+}
